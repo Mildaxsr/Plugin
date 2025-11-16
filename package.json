@@ -1,0 +1,52 @@
+{
+  "name": "comment-formatter",
+  "displayName": "Comment Formatter",
+  "description": "Плагин для автоматического добавления, удаления и форматирования комментариев в коде.",
+  "version": "0.0.1",
+  "publisher": "student",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:commentFormatter.addComments",
+    "onCommand:commentFormatter.removeComments",
+    "onCommand:commentFormatter.formatComments"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "commentFormatter.addComments",
+        "title": "Comment Formatter: Add comments"
+      },
+      {
+        "command": "commentFormatter.removeComments",
+        "title": "Comment Formatter: Remove comments"
+      },
+      {
+        "command": "commentFormatter.formatComments",
+        "title": "Comment Formatter: Format comments"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+alt+c",
+        "command": "commentFormatter.addComments",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+alt+x",
+        "command": "commentFormatter.removeComments",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+alt+f",
+        "command": "commentFormatter.formatComments",
+        "when": "editorTextFocus"
+      }
+    ]
+  }
+}
